@@ -1,0 +1,32 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "a0760939dcbd25955cce3bc0ce09efd5"
+application_url = "https://gzip-family-quote-associate.trycloudflare.com"
+embedded = true
+name = "inventQry"
+handle = "inventqry"
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://gzip-family-quote-associate.trycloudflare.com/auth/callback",
+  "https://gzip-family-quote-associate.trycloudflare.com/auth/shopify/callback",
+  "https://gzip-family-quote-associate.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = true
+
+[build]
+dev_store_url = "projekt-agency-apps.myshopify.com"
+automatically_update_urls_on_dev = true
